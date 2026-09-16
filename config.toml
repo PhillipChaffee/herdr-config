@@ -1,0 +1,91 @@
+onboarding = false
+# >>> furkankly.zoetrope keys (managed: `setup-keys` writes this block, `remove-keys` deletes it)
+[[keys.command]]
+key = "prefix+shift+z"
+type = "plugin_action"
+command = "furkankly.zoetrope.open"
+description = "zoetrope: session graph (overlay)"
+
+# The graph opens over the focused pane and gives the layout back when
+# it closes. The same key closes it. Two other placements, if you would
+# rather keep the graph on screen: uncomment one, or point the binding
+# above at its action. Then: herdr server reload-config
+# [[keys.command]]
+# key = "prefix+shift+v"
+# type = "plugin_action"
+# command = "furkankly.zoetrope.open-split"
+# description = "zoetrope: session graph (split)"
+
+# [[keys.command]]
+# key = "prefix+shift+c"
+# type = "plugin_action"
+# command = "furkankly.zoetrope.open-tab"
+# description = "zoetrope: session graph (tab)"
+
+# <<< furkankly.zoetrope keys
+
+# >>> herdr-file-viewer keys (delete this block to remove)
+[[keys.command]]
+key = "prefix+shift+f"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer"
+description = "file viewer: open beside the focused pane"
+# <<< herdr-file-viewer keys
+
+# >>> move-pane-to-workspace keys (delete this block to remove)
+[[keys.command]]
+key = "prefix+shift+m"
+type = "popup"
+command = "~/.config/herdr/move-pane.sh"
+description = "move pane to workspace (picker)"
+width = "80%"
+height = "60%"
+# <<< move-pane-to-workspace keys
+
+# >>> flip-pane keys (delete this block to remove)
+[[keys.command]]
+key = "prefix+f"
+type = "shell"
+command = "~/.config/herdr/flip-pane.sh"
+description = "flip pane split orientation"
+# <<< flip-pane keys
+
+[theme]
+name = "catppuccin-latte"
+auto_switch = true
+light_name = "catppuccin-latte"
+dark_name = "catppuccin"
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+status_indicators = "symbols"
+sidebar_width = 40
+sidebar_max_width = 46
+redraw_on_focus_gained = false
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", { token = "agent", bold = true, dim = false }],
+  [{ token = "workspace", dim = true, rules = [{ equals = "67-sus-95-clean", fg = "#209fb5" }, { equals = "agents", fg = "#179299" }, { equals = "collie", fg = "#fe640b" }, { equals = "context-monorepo", fg = "#1e66f5" }, { equals = "goose-phone-app", fg = "#dd7878" }, { equals = "onyx-rs", fg = "#04a5e5" }, { equals = "opencode", fg = "#7287fd" }, { equals = "personal-ai-setup", fg = "#df8e1d" }, { equals = "scratch", fg = "#8839ef" }, { equals = "ultraopen", fg = "#40a02b" }] }],
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon", { token = "workspace", rules = [{ equals = "67-sus-95-clean", fg = "#209fb5" }, { equals = "agents", fg = "#179299" }, { equals = "collie", fg = "#fe640b" }, { equals = "context-monorepo", fg = "#1e66f5" }, { equals = "goose-phone-app", fg = "#dd7878" }, { equals = "onyx-rs", fg = "#04a5e5" }, { equals = "opencode", fg = "#7287fd" }, { equals = "personal-ai-setup", fg = "#df8e1d" }, { equals = "scratch", fg = "#8839ef" }, { equals = "ultraopen", fg = "#40a02b" }] }],
+  ["branch", "git_status"],
+  # --- added by ez-corp.space-usage (removed by `status-disable`) ---
+  ["$usage"],
+  # --- end ez-corp.space-usage ---
+]
+
+[theme.custom.light]
+active_row_bg = "#ccd0da"
+selection_bg = "#ccd0da"
+
+[theme.custom.dark]
+active_row_bg = "#313244"
+selection_bg = "#313244"

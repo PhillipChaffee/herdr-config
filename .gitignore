@@ -1,0 +1,20 @@
+# Runtime state — never publish
+*.log
+*.sock
+session.json
+sessions/
+.plugins.lock
+
+# Config backups (may hold stale credentials)
+config.toml.bak*
+config.toml.*.bak
+config.toml.*-backup
+
+# Vendored plugin checkouts — herdr re-fetches these from GitHub
+plugins/github/
+
+# Plugin runtime state (env files, logs, local caches)
+plugins/config/
+
+# Plugin registry (machine-specific paths; plugins are re-added with `herdr plugin add`)
+plugins.json
