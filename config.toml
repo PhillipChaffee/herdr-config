@@ -70,6 +70,7 @@ row_gap = 0
 rows = [
   ["state_icon", { token = "agent", bold = true, dim = false }],
   [{ token = "workspace", dim = true, rules = [{ equals = "67-sus-95-clean", fg = "#209fb5" }, { equals = "agents", fg = "#179299" }, { equals = "collie", fg = "#fe640b" }, { equals = "context-monorepo", fg = "#1e66f5" }, { equals = "goose-phone-app", fg = "#dd7878" }, { equals = "onyx-rs", fg = "#04a5e5" }, { equals = "opencode", fg = "#7287fd" }, { equals = "personal-ai-setup", fg = "#df8e1d" }, { equals = "scratch", fg = "#8839ef" }, { equals = "ultraopen", fg = "#40a02b" }] }],
+  ["$kind"],
 ]
 
 [ui.sidebar.spaces]
