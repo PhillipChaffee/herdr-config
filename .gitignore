@@ -18,3 +18,8 @@ plugins/config/
 
 # Plugin registry (machine-specific paths; plugins are re-added with `herdr plugin add`)
 plugins.json
+
+# Scratch and runtime artifacts — not config
+oc_probe/
+opencode.json
+release-notes.json
