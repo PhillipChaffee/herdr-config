@@ -32,6 +32,14 @@ command = "herdr-file-viewer.open-file-viewer"
 description = "file viewer: open beside the focused pane"
 # <<< herdr-file-viewer keys
 
+# >>> persiyanov.reviewr keys (delete this block to remove)
+[[keys.command]]
+key = "cmd+r"
+type = "plugin_action"
+command = "persiyanov.reviewr.toggle"
+description = "reviewr: toggle pane"
+# <<< persiyanov.reviewr keys
+
 # >>> move-pane-to-workspace keys (delete this block to remove)
 [[keys.command]]
 key = "prefix+shift+m"
