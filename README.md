@@ -45,7 +45,7 @@ description = "flip pane split orientation"
 | `move-pane.sh` | fzf picker that moves the active pane into any workspace as a new tab |
 | `.gitignore` | The privacy fence — everything herdr regenerates at runtime stays local |
 
-**Keybindings** (the two script bindings plus the plugin-managed blocks):
+**Keybindings** (the two script bindings plus the plugin bindings):
 
 | Key | Runs | What you get |
 | --- | --- | --- |
@@ -53,6 +53,7 @@ description = "flip pane split orientation"
 | `prefix+shift+m` | `move-pane.sh` (80%×60% popup) | Move pane to workspace, with a picker |
 | `prefix+shift+z` | `furkankly.zoetrope.open` (plugin) | Session graph overlay |
 | `prefix+shift+f` | `herdr-file-viewer.open-file-viewer` (plugin) | File viewer beside the focused pane |
+| `prefix+shift+u` | `persiyanov.reviewr.toggle` (plugin) | Toggle the review pane beside the focused pane |
 
 Two more zoetrope placements (`prefix+shift+v` split, `prefix+shift+c` tab) ship commented-out
 in `config.toml` — uncomment one and run `herdr server reload-config`.
