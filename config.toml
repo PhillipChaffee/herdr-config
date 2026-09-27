@@ -34,7 +34,7 @@ description = "file viewer: open beside the focused pane"
 
 # >>> persiyanov.reviewr keys (delete this block to remove)
 [[keys.command]]
-key = "cmd+r"
+key = "prefix+shift+u"
 type = "plugin_action"
 command = "persiyanov.reviewr.toggle"
 description = "reviewr: toggle pane"
